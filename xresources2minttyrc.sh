@@ -12,6 +12,7 @@ if [[ -z "$1" ]]; then
 fi
 FILE="$1"
 
+printf "\n# generated from an xresources file\n# using xresources2minttyrc\n# ---------------------------------\n"
 col=$(getCol "foreground")
 printf "ForegroundColour=%d,%d,%d\n" 0x${col:0:2} 0x${col:2:2} 0x${col:4:2}
 col=$(getCol "background")
